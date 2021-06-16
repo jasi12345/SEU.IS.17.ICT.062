@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::view('index','index');
 Route::post('adduser',[DetailsController::class,'adddata']);
 Route::get('fetch',[DetailsController::class,'getdata']);
+Route::get('delete/{name}',[DetailsController::class,'delete']);
+Route::get('edit/{name}',[DetailsController::class,'edit']);

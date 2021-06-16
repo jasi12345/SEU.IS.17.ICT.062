@@ -28,4 +28,18 @@ class DetailsController extends Controller
         $data = Detail::all();
         return view('fetch',['data' => $data]);
     }
+
+    public  function delete($name){
+        $data = Detail::find($name);
+        $data->delete();
+        return redirect('fetch');
+
+    }
+    public  function edit($name){
+        $data = Detail::find($name);
+       
+        return view('edit',['data'=>$data]);
+
+    }
+    
 }
